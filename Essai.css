@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --bleu: #152437;
+  --blanc: white;
+  --gris: #AEACAB;
+}
+
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color:var(--blanc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Principal */
+.cv_SOUKOUNA {
+    margin-top: 120px;
+    width: 210mm; /* Largeur A4 */
+    min-height: 297mm; /* Hauteur A4 */
+    background: var(--blanc);
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+/* HEADER (BANDE BLEU) */
+
+header{
+  background-color: var(--bleu);
+  color: var(--blanc);
+  padding: 30px 70px;
+  padding-top: 50px;
+
+}
+.photo-container {
+    width: 165px;
+    height: 165px;
+    background: var(--bleu);
+    border-radius: 50%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border: 5px solid var(--blanc);
+    position: relative;
+    z-index: 2;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* La couté gauche */
+aside {
+    width: 35%;
+    background-color: var(--gris);
+    padding: 50px 40px;
+    margin-left: 10px;
+    h3 {
+        font-size: 1rem;
+        color: var(--blanc);
+        border-bottom: 2px solid var(--blanc);
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+        margin-top: 30px;
+    }
+    ul li {
+
+        font-size: 1,7rem;
+        margin-bottom: 10px;
+        color: var(--blanc);
+        display: flex;
+        align-items: center;
+        letter-spacing: 10%;
+    }
+    ul li i {
+        margin-right: 10px;
+        color: #FFFFFF;
+    }
+}
+
+
+/* Contenu Principal Droite */
+.div-principal{
+    width: 65%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
