@@ -24,11 +24,12 @@ body{
 
 /* Container Principal */
 .cv_SOUKOUNA {
-    margin-top: 120px;
+    margin: 20px auto;
     width: 210mm; /* Largeur A4 */
     min-height: 297mm; /* Hauteur A4 */
     background: var(--blanc);
     display: flex;
+    flex-direction: column; /* CRUCIAL : Met le header AU-DESSUS du reste */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
@@ -36,22 +37,23 @@ body{
 /* HEADER (BANDE BLEU) */
 
 header{
-  background-color: var(--bleu);
-  color: var(--blanc);
-  padding: 30px 70px;
-  padding-top: 50px;
-
+    background-color: var(--bleu);
+    color: var(--blanc);
+    display: flex; /* Aligne photo et texte horizontalement */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre l'ensemble dans la bande */
+    padding: 20px;
+    width: 100%;
 }
+
 .photo-container {
-    width: 165px;
-    height: 165px;
-    background: var(--bleu);
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 0 auto 40px;
+    margin: 0 30px 0 0; /* Marge à droite pour espacer du texte */
     overflow: hidden;
     border: 5px solid var(--blanc);
-    position: relative;
-    z-index: 2;
+    flex-shrink: 0; /* Empêche la photo de s'écraser */
 }
 
 .photo-container img {
@@ -61,13 +63,18 @@ header{
     position: relative;
     z-index: 2;
 }
-
+.main-wrapper {
+    display: flex; /* Aligne l'aside et la div-principal horizontalement */
+    flex-grow: 1;  /* Remplit tout l'espace restant en hauteur */
+    width: 100%;
+}
 /* La couté gauche */
 aside {
     width: 35%;
     background-color: var(--gris);
-    padding: 50px 40px;
-    margin-left: 10px;
+    padding: 30px;
+    margin-left: 0; /* Permet d'enlève la marge pour coller au bord */
+
     h3 {
         font-size: 1rem;
         color: var(--blanc);
@@ -77,17 +84,16 @@ aside {
         margin-top: 30px;
     }
     ul li {
-
-        font-size: 1,7rem;
+        font-size: 9px;
         margin-bottom: 10px;
         color: var(--blanc);
         display: flex;
         align-items: center;
-        letter-spacing: 10%;
+        letter-spacing: 2px;
     }
     ul li i {
         margin-right: 10px;
-        color: #FFFFFF;
+        color: var(--blanc) ;
     }
 }
 
@@ -95,8 +101,10 @@ aside {
 /* Contenu Principal Droite */
 .div-principal{
     width: 65%;
+    background-color: var(--blanc);
+    padding: 30px;
     display: flex;
-    position: relative;
     flex-direction: column;
+    position: relative;
 }
 
