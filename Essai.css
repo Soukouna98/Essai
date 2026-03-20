@@ -35,22 +35,32 @@ body{
 
 
 /* HEADER (BANDE BLEU) */
-
 header{
     background-color: var(--bleu);
     color: var(--blanc);
     display: flex; /* Aligne photo et texte horizontalement */
     align-items: center; /* Centre verticalement */
     justify-content: center; /* Centre l'ensemble dans la bande */
-    padding: 20px;
     width: 100%;
+    padding: 35px;
 }
-
+.header h1{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-left: 50px;
+}
+.header h2{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-left: -400px;
+    margin-top: 100px;
+}
 .photo-container {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
-    margin: 0 30px 0 0; /* Marge à droite pour espacer du texte */
+    margin: 0 40px; /* Marge à droite pour espacer du texte */
     overflow: hidden;
     border: 5px solid var(--blanc);
     flex-shrink: 0; /* Empêche la photo de s'écraser */
@@ -62,6 +72,7 @@ header{
     object-fit: cover;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 .main-wrapper {
     display: flex; /* Aligne l'aside et la div-principal horizontalement */
